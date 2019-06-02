@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animation-player</title>
+  <script type="text/javascript" src="dist/all.min.js"></script>
+  <script defer type="text/javascript" src="dist/bundle.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="nav-bar">
+      <button id="menu"><i class="fas fa-list"></i></button>
+      <span>CodeJam Pallete</span>
+    </nav>
+    <div id="menu-list">
+      <button id="save">Save</button>
+      <button id="clear">Clear</button>
+    </div>
+  </header>
+
+  <main>
+
+    <div id="preview-container">
+      <canvas id='preview'></canvas>
+      <div>
+        <button id="start-preview">start</button>
+        <button id="end-preview">end</button>
+        <button id="fullscreen-preview">fullscreen</button>
+      </div>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="24" value="1" class="slider" id="myRange">
+        <p>Frame: <span id="demo"></span></p>
+      </div>
+
+    </div>
+
+
+    <section class="main-container">
+      <aside class="menu-container">
+        <nav id='tools-container' class="tools-container">
+          <button class="btn btn-default tool" id="paint-bucket-tool">
+            <i class="fas fa-fill-drip"></i>
+            Paint bucket (P)
+          </button>
+          <button class="btn btn-default tool" id="color-tool">
+            <i class="fas fa-eye-dropper"></i>
+            Choose color (C)
+          </button>
+          <button class="btn btn-default tool" id="move-tool">
+            <i class="fas fa-arrows-alt"></i>
+            Move (M)
+          </button>
+          <button class="btn btn-default tool" id="transform-tool">
+            <i class="fas fa-exchange-alt"></i>
+            Transform (T)
+          </button>
+          <button class="btn btn-default tool choosen" id="pointer">
+            <i class="fas fa-mouse-pointer"></i>
+            Pointer (N)
+          </button>
+        </nav>
+        <nav id='pallete' class="pallete-container">
+          <div class="pallete-item">
+            <div id="pallete__color"></div>
+            <span>Current Color</span>
+          </div>
+          <div class="pallete-item">
+            <div id="prev-pallete__color"></div>
+            <span>Prev Color</span>
+          </div>
+          <div>
+            <div class="color-circle gray"></div>
+            <button class="color-item" id='gray'>gray</button>
+          </div>
+          <div>
+            <div class="color-circle green"></div>
+            <button class="color-item" id='green'>green</button>
+          </div>
+          <div>
+            <div class="color-circle red"></div>
+            <button class="color-item" id='red'>red</button>
+          </div>
+          <div>
+            <div class="color-circle blue"></div>
+            <button class="color-item" id='blue'>blue</button>
+          </div>
+        </nav>
+      </aside>
+
+      <div class="canvas-container">
+        <div class="canvas-table" id="canvas-table">
+          <div class="holder">
+            <div id="pixel1" class="figure square" draggable="true"> </div>
+          </div>
+          <div class="holder">
+            <div id="pixel2" class="figure square" draggable="true"> </div>
+          </div>
+          <div class="holder">
+            <div id="pixel3" class="figure square" draggable="true"> </div>
+          </div>
+          <div class="holder">
+            <div id="pixel4" class="figure square" draggable="true"> </div>
+          </div>
+          <div class="holder">
+            <div id="pixel5" class="figure square" draggable="true"> </div>
+          </div>
+          <div class="holder">
+            <div id="pixel6" class="figure square" draggable="true"> </div>
+          </div>
+          <div class="holder">
+            <div id="pixel7" class="figure square" draggable="true"> </div>
+          </div>
+          <div class="holder">
+            <div id="pixel8" class="figure square" draggable="true"> </div>
+          </div>
+          <div class="holder">
+            <div id="pixel1" class="figure square" draggable="true"> </div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <button id='add-frame'><i class="fas fa-plus"></i></button>
+        <div id="timeline">
+        </div>
+      </aside>
+    </section>
+
+  </main>
+</body>
+
+</html>
